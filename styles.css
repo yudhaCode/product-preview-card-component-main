@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Primary Colors */
+:root {
+  --color-dark-cyan: hsl(158, 36%, 37%);
+  --color-cream: hsl(30, 38%, 92%);
+}
+
+/* Neutral Colors */
+:root {
+  --color-very-dark-blue: hsl(212, 21%, 14%);
+  --color-dark-grayish-blue: hsl(228, 12%, 48%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800;900&family=Montserrat:wght@500;700&display=swap");
+/* CSS Reset */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ol,
+ul,
+li,
+form,
+label,
+input,
+textarea,
+table,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+as0ide,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Remove default list styles (e.g., bullet points) */
+ul,
+ol {
+  list-style: none;
+}
+button {
+  /* Mengatur ulang properti-properti gaya tombol ke nilai default */
+  padding: initial;
+  border: initial;
+  background: initial;
+  color: initial;
+  font-size: initial;
+  cursor: initial;
+}
+
+/* Opsional: Menghilangkan tampilan efek hover dan aktif pada tombol */
+button:hover,
+button:active {
+  /* Mengatur ulang properti-properti gaya efek hover dan aktif */
+  background-color: initial;
+  border-color: initial;
+  color: initial;
+}
+
+/* Correct block-level display not defined for any HTML5 element in IE 8/9. */
+/* Optional: Add 'display: block;' to specific elements (e.g., <a>, <abbr>) that require it. */
+/* Example: a { display: block; } */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: var(--color-dark-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 500;
+}
+
+/* container */
+.container {
+  max-width: 375px;
+  padding: 1.4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.content {
+  padding: 1rem 1.6rem;
+  padding-right: 4rem;
+}
+
+.thumbnail-img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.top-title {
+  color: var(--color-dark-grayish-blue);
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.product-title {
+  color: var(--color-very-dark-blue);
+  font-size: 2rem;
+  line-height: 1;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.product-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.price-wrapper {
+  font-family: "Fraunces", serif;
+  display: flex;
+  align-items: center;
+}
+
+.discounted-price {
+  font-size: 2rem;
+  color: var(--color-dark-cyan);
+  font-weight: 700;
+}
+
+.normal-price {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.1px;
+  font-size: 12px;
+  margin-left: 1rem;
+  font-family: "Fraunces", serif;
+}
+
+.main-btn {
+  width: 100%;
+  background-color: var(--color-dark-cyan);
+  padding: 0.8rem;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+.cart-icon {
+  width: 12px;
+  margin-right: 8px;
+}
+
+.attribution {
+  padding: 1rem;
+  max-width: 375px;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+  }
+
+  .container {
+    flex-direction: row;
+    max-width: 648px;
+    align-items: center;
+  }
+
+  .content {
+    width: 490px;
+    padding-top: 0;
+  }
+
+  .thumbnail-img {
+    content: url("images/image-product-desktop.jpg"); /* Gambar baru untuk lebar layar 768px ke atas */
+    border-radius: 10px 0 0 10px;
+  }
+
+  .product-title {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .product-desc {
+    margin-bottom: 1.4rem;
+  }
+
+  .attribution {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-btn {
+    margin-top: 1.4rem;
+  }
+}
