@@ -90,15 +90,6 @@ button {
   cursor: initial;
 }
 
-/* Opsional: Menghilangkan tampilan efek hover dan aktif pada tombol */
-button:hover,
-button:active {
-  /* Mengatur ulang properti-properti gaya efek hover dan aktif */
-  background-color: initial;
-  border-color: initial;
-  color: initial;
-}
-
 /* Correct block-level display not defined for any HTML5 element in IE 8/9. */
 /* Optional: Add 'display: block;' to specific elements (e.g., <a>, <abbr>) that require it. */
 /* Example: a { display: block; } */
@@ -193,6 +184,12 @@ p {
   display: flex;
   justify-content: center;
   margin-top: 0.8rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background-color: var(--color-very-dark-blue);
 }
 
 .cart-icon {
